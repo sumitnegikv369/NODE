@@ -1,2 +1,6 @@
 # NODE
-Chin chan choon
+
+## Please Use Your Initials Before Editing The Docs
+### S -> Sumit
+### V -> Varun
+### K -> Kushagra
