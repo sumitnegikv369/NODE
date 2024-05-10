@@ -59,6 +59,48 @@ server.listen(3000, () => {
 
 ```
 
+### HTTP Status codes
+
+ In Node.js, HTTP status codes are essential for communicating the outcome of an HTTP request-response cycle.
+ Different types of status codes and their meanings:
+
+1. **Informational Responses (100–199):**
+   - These codes indicate that the server has received the request and is processing it. They are informational and don't typically affect the client's behavior.
+
+2. **Successful Responses (200–299):**
+   - These codes indicate that the request was successful. 
+   Common ones include:
+     - `200 OK`: The request was successful.
+     - `201 Created`: A new resource was successfully created.
+     - `204 No Content`: The server successfully processed the request but doesn't need to return any content.
+
+3. **Redirects (300–399):**
+   - These codes indicate that the client must take additional action to complete the request. Examples:
+     - `301 Moved Permanently`: The requested resource has moved permanently.
+     - `302 Found` (or `303 See Other`): Temporary redirection.
+
+4. **Client Error Responses (400–499):**
+   - These codes indicate that there was an error on the client side. Common ones include:
+     - `400 Bad Request`: The request was malformed or invalid.
+     - `401 Unauthorized`: Authentication is required.
+     - `403 Forbidden`: The client doesn't have permission to access the resource.
+     - `404 Not Found`: The requested resource does not exist.
+
+5. **Server Error Responses (500–599):**
+   - These codes indicate that there was an error on the server side. Examples:
+     - `500 Internal Server Error`: An unexpected error occurred on the server.
+     - `502 Bad Gateway`: The server received an invalid response from an upstream server.
+     - `503 Service Unavailable`: The server is temporarily unable to handle requests.
+
+These status codes helps clients understand the outcome of their requests and enables effective error handling.
+
+In  Express.js, we can set status codes using `response.status(code)` and send corresponding messages. For example:
+```javascript
+response.status(200).send('OK');
+response.status(404).send('Not Found');
+
+```
+
 ## Built-in Core Modules
 These come pre-installed with Node.js and are readily available for use in your projects.
 
@@ -156,3 +198,4 @@ process.on('SIGINT', () => {
   process.exit(0); // Exit gracefully
 });
 ```
+
