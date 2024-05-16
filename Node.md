@@ -283,4 +283,50 @@ The global object that acts as a namespace for all W3C WebAssembly related funct
  
 - __dirname: The output throws an error which proves that __dirname is not globally defined in node.js. It requires a script to give the desired output as __dirname is only defined in scripts.
   
-- __filename: The output throws an error which proves that __filename is not globally defined in node.js. It requires a script to give the desired output as __filename is only defined in scripts. 
+- __filename: The output throws an error which proves that __filename is not globally defined in node.js. It requires a script to give the desired output as __filename is only defined in scripts.
+
+# Node Modules
+In Node.js, Modules are the blocks of encapsulated code that communicate with an external application on the basis of their related functionality. Modules can be a single file or a collection of multiple files/folders. The reason programmers are heavily reliant on modules is because of their reusability as well as the ability to break down a complex piece of code into manageable chunks. 
+
+Modules are of three types:
+
+- Core Modules
+- local Modules
+- Third-party Modules
+
+Core Modules	Description
+- http:	creates an HTTP server in Node.js.
+- assert:	set of assertion functions useful for testing.
+- fs:	used to handle file system.
+- path:	includes methods to deal with file paths.
+- process:	provides information and control about the current Node.js process.
+- os:	provides information about the operating system.
+- querystring:	utility used for parsing and formatting URL query strings.
+- url:	module provides utilities for URL resolution and parsing.
+
+# http
+To make HTTP requests in Node.js, there is a built-in module HTTP in Node.js to transfer data over the HTTP. To use the HTTP server in the node, we need to require the HTTP module. The HTTP module creates an HTTP server that listens to server ports and gives a response back to the client.
+- we can create an HTTP server with the help of http.createServer() method.
+- To make requests via the HTTP module http.request() method is used.
+  `js http.request(options[, callback])`
+
+  ```js
+  
+const http = require('http');
+ 
+let options = {
+    host: 'www.geeksforgeeks.org',
+    path: '/courses',
+    method: 'GET'
+};
+ 
+// Making a get request to
+// 'www.geeksforgeeks.org'
+http.request(options, (response) => {
+ 
+    // Printing the statusCode
+    console.log(`STATUS: ${response.statusCode}`);
+}).end();
+```
+
+
