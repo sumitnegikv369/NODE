@@ -226,3 +226,9 @@ Read : It reads the inputs from users and parses it into JavaScript data structu
 Eval : The parsed JavaScript data structure is evaluated for the results.
 Print : The result is printed after the evaluation.
 Loop : Loops the input command. To come out of NODE REPL, press ctrl+c twice
+
+## Buffer Class
+Buffer The Buffer class is an inbuilt globally accessible class that means it can be used without importing any module. The Buffer class is used to deal with binary data. Buffer class objects are used to represent binary data as a sequence of bytes. 
+```js
+const buffer = new Buffer.alloc(5, "abcde");
+```
