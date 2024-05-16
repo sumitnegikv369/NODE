@@ -308,7 +308,7 @@ Core Modules	Description
 To make HTTP requests in Node.js, there is a built-in module HTTP in Node.js to transfer data over the HTTP. To use the HTTP server in the node, we need to require the HTTP module. The HTTP module creates an HTTP server that listens to server ports and gives a response back to the client.
 - we can create an HTTP server with the help of http.createServer() method.
 - To make requests via the HTTP module http.request() method is used.
-`js http.request(options[, callback])`
+  http.request(options[, callback])`
 
 ```js
   
