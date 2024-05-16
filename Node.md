@@ -199,3 +199,22 @@ process.on('SIGINT', () => {
 });
 ```
 
+# JS vs C++
+
+Execution Environment:
+
+- JavaScript: It runs within a host environment (e.g., web browser, Node.js runtime). This environment provides APIs (Application Programming Interfaces) that allow JavaScript code to interact with the operating system indirectly. For example, in a browser, JavaScript can use the fetch API to make HTTP requests or interact with the DOM.
+- C++: It runs as a standalone executable or as part of a larger system. C++ code can directly use system libraries and APIs to interact with the operating system, file system, network, etc.
+
+Access to OS Resources:
+
+- JavaScript: It has limited direct access to OS resources for security reasons. JavaScript executed in a browser is sandboxed and cannot directly access the file system, system processes, or low-level hardware.
+  - C++: It has more direct access to OS resources because the compiled code can call system functions and interact with hardware through system APIs.
+
+# NOTE:
+
+'Yes, that's often a significant reason why C++ programs have more direct access to system libraries and APIs. Many system libraries, especially those related to operating systems and hardware interactions, are written in C or C++. This makes it easier for C++ programs to interact with them directly because they can link to these libraries and call their functions.
+
+Additionally, C and C++ are considered low-level languages compared to languages like JavaScript. They provide features and constructs that are closer to the hardware and operating system, such as pointers, memory management control, and direct access to system resources. This makes C++ well-suited for systems programming and interfacing with low-level system components.
+
+In contrast, languages like JavaScript are often executed in a sandboxed environment (e.g., web browser or Node.js runtime) for security reasons. They typically have restricted access to system resources to prevent malicious actions by web scripts. However, they can still interact with the underlying system indirectly through APIs provided by their runtime environments or through communication with backend services.'
