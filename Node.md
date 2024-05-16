@@ -275,3 +275,12 @@ console.log(myURL.href);
 ```
 ## WebAssembly
 The global object that acts as a namespace for all W3C WebAssembly related functionality. WebAssembly is a low level Assembly-like language that can be run on modern browsers. 
+
+# The following variables might appear to be global but actually exist only within the scope of some modules
+- exports: It is used to exports modules using module.exports.
+
+- module: It is a reference to the current module and is not global rather local to each module. It is used to make a particular module available through require() in the application. 
+ 
+- __dirname: The output throws an error which proves that __dirname is not globally defined in node.js. It requires a script to give the desired output as __dirname is only defined in scripts.
+  
+- __filename: The output throws an error which proves that __filename is not globally defined in node.js. It requires a script to give the desired output as __filename is only defined in scripts. 
