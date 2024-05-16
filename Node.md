@@ -232,3 +232,46 @@ Buffer The Buffer class is an inbuilt globally accessible class that means it ca
 ```js
 const buffer = new Buffer.alloc(5, "abcde");
 ```
+## Process Object
+It is an inbuilt global object that is an instance of EventEmitter used to get information on current process. It can also be accessed using require() explicitly. 
+
+## Console Object
+It is an inbuilt global object used to print to stdout and stderr. 
+
+## Global Object
+It is a global namespace. Defining a variable within this namespace makes it globally accessible. 
+
+## TextEncoder Object
+It is an implementation of the WHATWG Encoding Standard TextEncoder API. All instances of TextEncoder are encoded in UTF-8 only. 
+
+```js
+const encoder = new TextEncoder();
+const e = encoder.encode("hello world");
+console.log(e);
+```
+
+## TextDecoder Object
+
+It is an implementation of the WHATWG Encoding Standard TextDecoder API. 
+```js
+const decoder = new TextDecoder();
+const d = decoder.decode(e);
+console.log(d)
+```
+## URL
+URL The URL class instance is a global object and is implemented by the following WHATWG URL Standard. The URL constructor creates a new URL object.
+
+## URLSearchParams
+URLSearchParams API is used to perform read and write operations on the query of a URL.
+
+```js
+const myURL = new URL('https://www.register.com/?name=gfg');
+
+console.log(myURL.searchParams.get('name'));
+
+myURL.searchParams.append('name', 'xyz');
+
+console.log(myURL.href);
+```
+## WebAssembly
+The global object that acts as a namespace for all W3C WebAssembly related functionality. WebAssembly is a low level Assembly-like language that can be run on modern browsers. 
