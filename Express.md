@@ -1,0 +1,2 @@
+# Definition
+Express is the most popular minimalistic framework. It is built upon the built-in module HTTP of NodeJS to facilitate the simple and easy interaction between frontend and backend logic through API, and also it enables us to organize our business logic in so much pretty manner. It is much flexible and we can use it for both the web and android. Also, it provides a very simple error handling procedure.
