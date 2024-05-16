@@ -213,8 +213,16 @@ Access to OS Resources:
 
 # NOTE:
 
-'Yes, that's often a significant reason why C++ programs have more direct access to system libraries and APIs. Many system libraries, especially those related to operating systems and hardware interactions, are written in C or C++. This makes it easier for C++ programs to interact with them directly because they can link to these libraries and call their functions.
+`Yes, that's often a significant reason why C++ programs have more direct access to system libraries and APIs. Many system libraries, especially those related to operating systems and hardware interactions, are written in C or C++. This makes it easier for C++ programs to interact with them directly because they can link to these libraries and call their functions.
 
 Additionally, C and C++ are considered low-level languages compared to languages like JavaScript. They provide features and constructs that are closer to the hardware and operating system, such as pointers, memory management control, and direct access to system resources. This makes C++ well-suited for systems programming and interfacing with low-level system components.
 
-In contrast, languages like JavaScript are often executed in a sandboxed environment (e.g., web browser or Node.js runtime) for security reasons. They typically have restricted access to system resources to prevent malicious actions by web scripts. However, they can still interact with the underlying system indirectly through APIs provided by their runtime environments or through communication with backend services.'
+In contrast, languages like JavaScript are often executed in a sandboxed environment (e.g., web browser or Node.js runtime) for security reasons. They typically have restricted access to system resources to prevent malicious actions by web scripts. However, they can still interact with the underlying system indirectly through APIs provided by their runtime environments or through communication with backend services.`
+
+# REPL
+REPL (READ, EVAL, PRINT, LOOP) is a computer environment similar to Shell (Unix/Linux) and command prompt. Node comes with the REPL environment when it is installed. System interacts with the user through outputs of commands/expressions used. It is useful in writing and debugging the codes. The work of REPL can be understood from its full form:
+
+Read : It reads the inputs from users and parses it into JavaScript data structure. It is then stored to memory.
+Eval : The parsed JavaScript data structure is evaluated for the results.
+Print : The result is printed after the evaluation.
+Loop : Loops the input command. To come out of NODE REPL, press ctrl+c twice
